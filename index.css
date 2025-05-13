@@ -1,0 +1,880 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    overflow:hidden
+    /* background-color:white;  */
+}
+
+.navindex{
+    height: 100px;
+    width: 100%;
+    background-color:transparent;
+    position: fixed;
+    z-index: 1000;
+    /* backdrop-filter: blur(10px); */
+}
+
+.navb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white!important;
+}
+.navb a{
+    position: relative;
+    width: max-content;
+}
+.navb a::after{
+    content: "";
+    background:green;
+    border-radius: 100px;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.navb a:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+.bl{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    /* align-items: center; */
+}
+
+.bm{
+    display: flex;
+    justify-content: space-evenly;
+    color: blueviolet;
+}
+
+.br{
+    display: flex;
+    justify-content: space-evenly;
+    color: white!important;
+}
+
+.home{
+    min-height: 606px;
+    width: 100%;
+    background-color: rgb(223, 217, 217);
+    background-image: url(bg1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    animation-name: home-animate;
+    animation-direction:alternate-reverse;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-play-state: running; 
+    animation-timing-function: ease-in-out;  
+    animation-iteration-count: infinite; 
+
+}
+    
+
+@keyframes home-animate {
+    0%{
+        background-image: url(back2.webp);
+    } 
+    20%{
+        background-image: url(bg3.jpeg);
+    }  
+    40%{
+        background-image: url(back3.webp);
+    }  
+    60%{
+        background-image: url(bg2.jpeg);
+    }  
+    80%{
+        background-image: url(back2.webp);
+    } 
+    100%{
+        background-image: url(back3.webp);
+    }    
+}
+
+.inside{
+    min-height: 300px;
+    width: 400px;
+    background-color: transparent;
+    text-align: center;
+    color: white;  
+}
+
+.inside>h4{
+    color: white;
+}
+
+.inside>h2{
+    color: green;
+}
+
+.content{
+    min-height: 300px;
+    width: 100%;
+     background-color: rgb(253, 248, 248); 
+    display: flex;
+    padding: 10px;
+    
+}
+
+.cb1{
+    height: 100%;
+    width: 33%;
+    padding: 15px;
+}
+
+.cb1 h3{
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    animation: homenav 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    animation-duration: 4s;
+}
+.co>.cb1 p{
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    animation: homenav 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry ;
+    animation-duration: 4s;
+    animation-delay: 4s;
+}
+@keyframes homenav {
+    to{
+        bottom: 0px;
+        opacity: 1;
+        transition: 10s;
+    }
+}
+
+.cb2{
+    height: 100%;
+    width: 34%;
+    padding: 15px;
+}
+.cb2 h3{
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    animation: homenav 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    animation-duration: 4s;
+    animation-delay: 6s;
+}
+.cb2 p{
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    animation: homenav 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    animation-duration: 4s;
+    animation-delay: 8s;
+}
+
+.cb3{
+    height: 100%;
+    width: 33%;
+    padding: 15px;
+}
+.cb3 h3{
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    animation: homenav 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    animation-duration: 4s;
+    animation-delay: 9s;
+}
+.cb3 p{
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    animation: homenav 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    animation-duration: 4s;
+    animation-delay: 12s;
+}
+
+.co>img{
+    height: 100px;
+    width: 100px;
+    background-color: paleturquoise;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.co>h3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.co{
+    position: relative;
+    bottom: 80px;
+}
+
+/* <!-----abuot----> */
+
+.about{
+    min-height: 1100px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 100px;
+    /* background-color: aqua; */
+    /* background-color: paleturquoise; */
+}
+
+.abup{
+    min-heightt: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upl{
+    height: 100%;
+    width: 60%;
+    padding: 40px;
+}
+
+.upl>h3{
+    padding-bottom: 20px;
+}
+
+.upl>h4{
+    color: rgba(175, 171, 171, 0.774);
+    padding-bottom: 15px;
+}
+
+.upl>p{
+    color: rgb(165, 165, 165);
+}
+
+.upr{
+    height: 100%;
+    width: 40%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    
+}
+
+.upb{
+    height: 100%;
+    width: 85%;
+    background-color: paleturquoise;
+}
+
+.imga{
+    min-height: 400px;
+    width: 400px;
+    position: relative;
+    right:25px;
+    top: 25px;
+}
+
+.abdo{
+    min-height: 450px;
+    display: flex;
+    padding: 20px;
+}
+.dol{
+    height: 100%;
+    width: 40%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* .dor{
+    height: 100%;
+    width: 40%;
+    padding: 30px;  
+    padding-right: 40px;
+} */
+
+.dob{
+    height: 100%;
+    width: 85%;
+    background-color: paleturquoise;
+}
+
+.imgb{
+    min-height: 400px;
+    width: 400px;
+    position: relative;
+    right:25px;
+    top: 25px;
+}
+
+.dor{
+    min-height: 100%;
+    width: 60%;
+  
+    padding: 30px;
+    padding-right: 50px;
+    padding-top: 70px;  
+}
+
+/* .countt{
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    background-image: url(./back1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+} */
+
+.project{
+    min-height: 2300px;
+    width: 100%;
+    gap: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* project */
+
+.project>h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.p1{
+    min-height: 550px;
+    width: 100%;
+    display: flex;
+}
+
+.p1img{
+    height: 100%;
+    width: 70%;
+    
+}
+
+.p1img>img{
+    width: 800px;
+    min-height: 550px;
+}
+
+.p1cc{
+    height: 100%;
+    width: 30%;
+   
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+}
+
+.p2{
+    min-height: 650px;
+    width: 100%;
+    display: flex;
+}
+
+.p2cc{
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.p2img{
+    height: 100%;
+    width: 70%;
+}
+
+.p2img>img{
+    mn-width: 800px;
+    min-height: 650px;
+}
+
+
+.p3{
+    min-height: 650px;
+    width: 100%;
+    display: flex;
+}
+
+.p3img{
+    height: 100%;
+    width: 70%;
+}
+
+.p3img>img{
+    width: 800px;
+    min-height: 650px;
+}
+
+.p3cc{
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
+/* service */
+
+
+.service{
+    min-height: 1800px;
+    width: 100%;
+    
+}
+
+.sertop{
+    min-height: 200px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.sertop>h3{
+    color: rgba(0, 128, 0, 0.658);
+}
+
+.serimg1{
+    min-height: 300px;
+    /* width: 100%; */
+    /* gap: 50px; */
+    /* padding: 20px; */
+    display: flex;
+}
+
+.imgg1{
+    height: 100%;
+    /* width: 50%; */
+    background-image: url(./lp3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: teal;
+}
+.imgg1>h3{
+    opacity: 0;
+    cursor: pointer;
+}
+.imgg1:hover h3{
+    opacity: 1;
+    scale: 1.111;
+    cursor: pointer;
+}
+.imgg1:hover{
+    background-image: none;
+    scale: 1.03;
+    transition-duration: 4ms; 
+}
+
+.imgg2{
+    height: 100%;
+    /* width: 50%; */
+    background-image: url(./lp5.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: teal;
+}
+.imgg2>h3{
+    opacity: 0;
+    cursor: pointer;
+}
+.imgg2:hover h3{
+    opacity: 1;
+    scale: 1.111;
+    cursor: pointer;
+}
+.imgg2:hover{
+    background-image: none;
+    scale: 1.03;
+    transition-duration: 4ms; 
+}
+
+.serimg2{
+    min-height: 300px;
+    width: 100%;
+    /* gap: 50px; */
+    /* padding: 20px; */
+    display: flex;
+}
+
+.imgg3{
+    height: 100%;
+    /* width: 50%; */
+    background-image: url(./lp4.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: teal;
+}
+.imgg3>h3{
+    opacity: 0;
+    cursor: pointer;
+}
+.imgg3:hover h3{
+    opacity: 1;
+    scale: 1.111;
+    cursor: pointer;
+}
+.imgg3:hover{
+    background-image: none;
+    scale: 1.03;
+    transition-duration: 4ms; 
+}
+
+.imgg4{
+    height: 100%;
+    /* width: 50%; */
+    background-image: url(./lp2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: teal;
+}
+.imgg4>h3{
+    opacity: 0;
+    cursor: pointer;
+}
+.imgg4:hover h3{
+    opacity: 1;
+    scale: 1.111;
+    cursor: pointer;
+}
+.imgg4:hover{
+    background-image: none;
+    scale: 1.03;
+    transition-duration: 4ms; 
+}
+
+.serimg3{
+     min-height: 500px;
+    width: 100%;
+    gap: 50px;
+    pad: 20px;
+    display: flex;
+   
+}
+
+.imgg5{
+    height: 100%;
+    /* width: 50%; */
+    background-image: url(./lp1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: teal;
+}
+.imgg5>h3{
+    opacity: 0;
+    cursor: pointer;
+}
+.imgg5:hover h3{
+    opacity: 1;
+    scale: 1.111;
+    cursor: pointer;
+}
+.imgg5:hover{
+    background-image: none;
+    scale: 1.03;
+    transition-duration: 4ms; 
+}
+
+.imgg6{
+    height: 100%;
+    /* width: 50%; */
+    background-image: url(./lp2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: teal;
+}
+.imgg6>h3{
+    opacity: 0;
+    cursor: pointer;
+}
+.imgg6:hover h3{
+    opacity: 1;
+    scale: 1.111;
+    cursor: pointer;
+}
+.imgg6:hover{
+    background-image: none;
+    scale: 1.03;
+    transition-duration: 4ms; 
+}
+
+/* blog */
+
+.blog{
+    min-height: 2200px;
+    width: 100%;
+    
+    padding: 20px;
+    padding-left: 100px;
+    padding-right:100px ;
+}
+
+.blog1{
+    height: 850px;
+    width: 100%;
+    
+    
+}
+
+.blimg1{
+    height: 500px;
+    width: 100%;
+    background-image: url(./bb7.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: imgg;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+.blimg1:hover{
+    filter: grayscale(3);
+    transform: scale(1.03);
+}
+
+.blcon1{
+    height: 300px;
+    width: 100%;
+    padding-top: 30px;
+}
+.blcon1>h2{
+    color: brown;
+}
+
+.blcon1>h5{
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.blog2{
+    height: 650px;
+    width: 100%;
+    display:flex;
+    gap: 50px;
+}
+
+.bl1{
+    height: 100%;
+    width: 50%;
+}
+
+.blimg2{
+    height: 50%;
+    width: 100%;
+    background-image: url(./bbg2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation-name: imgg;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+.blimg2:hover{
+    filter: grayscale(3);
+    transform: scale(1.03);
+}
+.blcon2{
+    height: 300px;
+    width: 100%;
+    padding-top: 30px;
+    
+}
+.blcon2>h2{
+    color: brown;
+    font-size: 30px;
+}
+
+.bl2{
+    height: 100%;
+    width: 50%;
+   
+}
+
+.blimg3{
+    height: 50%;
+    width: 100%;
+    background-image: url(./bb3.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: imgg;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+    animation-name: imgg;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+.blimg3:hover{
+    filter: grayscale(3);
+    transform: scale(1.03);
+}
+
+.blimg3:hover{
+    filter: grayscale(3);
+    transform: scale(1.03);
+}
+
+.blcon3{
+    height: 300px;
+    width: 100%;
+    padding-top: 30px;
+    
+}
+.blcon3>h2{
+    color: brown;
+    font-size: 30px;
+}
+
+.blog3{
+    height: 650px;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+}
+
+.bl3{
+    height: 100%;
+    width: 50%;
+    
+}
+.blimg4{
+    height: 50%;
+    width: 100%;
+    background-image: url(./bb4.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: imgg;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+.blimg4:hover{
+    filter: grayscale(3);
+    transform: scale(1.03);
+}
+.blcon4{
+    height: 300px;
+    width: 100%;
+    padding-top: 30px;
+}
+.blcon4>h2{
+    color: brown;
+    font-size: 30px;
+}
+
+.bl4{
+    height: 100%;
+    width: 50%;
+   
+}
+.blimg5{
+    height: 50%;
+    width: 100%;
+    background-image: url(./bb5.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: imgg;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+.blimg5:hover{
+    filter: grayscale(3);
+    transform: scale(1.03);
+}
+.blcon5{
+    height: 300px;
+    width: 100%;
+    padding-top: 30px;
+}
+.blcon5>h2{
+    color: brown;
+    font-size: 30px;
+}
+
+.contact{
+    min-height: 300px;
+    width: 100%;
+}
